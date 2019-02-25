@@ -9,6 +9,16 @@ def index():
         one = request.form.get('one_bet')
         two = request.form.get('two_bet')
         cross = request.form.get('cross_bet')
+        if "," in one:
+            one = one.replace(",", ".")
+        if "," in two:
+            two = two.replace(",", ".")
+        if "," in cross: 
+            cross = cross.replace(",", ".")
+        chars = "abcdefghijklmnopqrstuvxyzABCDEFGHIJKLMNOPQRSTUVXYZ"    
+        for i in chars:
+            if i in one or i in two or i in cross:
+                return render_template("index.html", bettson=["Fel","", "", ""])
         bonus = request.form.get('bonus')
         bettson = bet(float(one),float(cross),float(two), float(bonus))
         return render_template("index.html", bettson=bettson)
