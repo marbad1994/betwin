@@ -15,8 +15,8 @@ def main(e_odds,x_odds, t_odds, x_bet):
             t_from = 500
             t_to = 3000
         if bonus == 2000:
-            e_from = 6000
-            e_to = 18000
+            e_from = 4000
+            e_to = 20000
             t_from = 800
             t_to = 6500
         if bonus == 2500:
@@ -61,8 +61,8 @@ def main(e_odds,x_odds, t_odds, x_bet):
             e_from = 500
             e_to = 3000
         if bonus == 2000:
-            t_from = 6000
-            t_to = 18000
+            t_from = 4000
+            t_to = 20000
             e_from = 800
             e_to = 6500
         if bonus == 2500:
