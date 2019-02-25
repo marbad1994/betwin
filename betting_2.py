@@ -50,7 +50,6 @@ def main(e_odds,x_odds, t_odds, x_bet):
         #e_odds = 6.45 
         #x_odds = 4.2
         #t_odds = 1.63
-        print e_odds
         if bonus == 500:
             t_from = 2000
             t_to = 5000
