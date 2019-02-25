@@ -6,22 +6,22 @@ def main(e_odds,x_odds, t_odds, x_bet):
         x_total = x_bet + bonus
         if bonus == 500:
             e_from = 1000
-            e_to = 15000
+            e_to = 4000
             t_from = 200
-            t_to = 3500
+            t_to = 1500
         if bonus == 1000:
             e_from = 2000
-            e_to = 17000
+            e_to = 7000
             t_from = 500
-            t_to = 5000
+            t_to = 3000
         if bonus == 2000:
             e_from = 5000
-            e_to = 24000
-            t_from = 8000
+            e_to = 20000
+            t_from = 800
             t_to = 6500
         if bonus == 2500:
             e_from = 6000
-            e_to = 30000
+            e_to = 25000
             t_from = 1000
             t_to = 7500
     
@@ -52,22 +52,22 @@ def main(e_odds,x_odds, t_odds, x_bet):
         #t_odds = 1.63
         if bonus == 500:
             t_from = 1000
-            t_to = 15000
+            t_to = 4000
             e_from = 200
-            e_to = 3500
+            e_to = 1500
         if bonus == 1000:
             t_from = 2000
-            t_to = 17000
+            t_to = 7000
             e_from = 500
-            e_to = 5000
+            e_to = 3000
         if bonus == 2000:
             t_from = 5000
-            t_to = 24000
-            e_from = 8000
+            t_to = 20000
+            e_from = 800
             e_to = 6500
         if bonus == 2500:
             t_from = 6000
-            t_to = 30000
+            t_to = 25000
             e_from = 1000
             e_to = 7500
     
