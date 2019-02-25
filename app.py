@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
 from betting_2 import main as bet
-import subprocess
 
 app = Flask(__name__)
 
