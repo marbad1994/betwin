@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<style>
+.bg-light {
+    background-color: #a19168 !important;
+    border-color: #E7E7E7;
+}
+</style>
+
+<nav class="navbar navbar-light bg-light">
+	<a class="navbar-brand" href="#"><img src="../static/icon.png"/><img src="../static/logo.png"/></a>
+</nav>
+<body style="min-height: 1080px; background-color: #677259">
+<br>
+<div style="background-color: #ffffff; margin-left: 25%; margin-right: 25%">
+	<br><br>
+<div class="container">
+<form action="{{ url_for('index') }}" method="POST">
+<div class="row">
+	<div class="col">
+		<h3>1</h3>
+	<input type="text" name="one_bet"><br>
+	</div>
+	<div class="col">
+		<h3>X</h3>
+	<input type="text" name="cross_bet"><br>
+	</div>
+	<div class="col">
+		<h3>2</h3>
+	<input type="text" name="two_bet"><br>
+	</div>
+</div>
+<br>
+<h3>Bonus</h3> 
+<select name="bonus">
+  <option value="500">500</option>
+  <option value="1000">1000</option>
+  <option value="2000">2000</option>
+  <option value="2500">2500</option>
+</select> 
+<br>
+<br>
+	<button class="btn btn-success" type="submit">Submit</button>
+</form>
+<h1>{{bettson[3]}}</h1>
+<div class="row">
+
+	<div class="col">	
+		<h3>{{bettson[0]}}</h3>
+	</div>
+
+	<div class="col">	
+		<h2>{{bettson[1]}}</h2>
+	</div>
+
+	<div class="col">	
+		<h2>{{bettson[2]}}</h2>
+	</div>
+
+</div>
+<a href=""  data-toggle="modal" data-target="#exampleModal">
+  Hur funkar det?
+</a>
+</div>
+<br>
+<br>
+<br>
+</div>
+</body>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Hur funkar det?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Algoritmen räknar ut vad du ska betta på 1, X och 2 för att gå +- 0 som sämst och vinna pengar på alternativet med lägst odds.
+	Bonusen bestämmer hur mycket det går att vinna, på "X" ska du alltid betta bonusen gånger 2.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
