@@ -85,7 +85,7 @@ def main(e_odds,x_odds, t_odds, x_bet):
                     bets.append([vinst_e, vinst_x, vinst_t, betting])
 
         if bets != []:
-            return sorted(bets, key=lambda x: x[0])[-1]
+            return sorted(bets, key=lambda x: x[2])[-1]
         else:
             return ["Inget resultat", "","",""]
 if __name__ == '__main__':
