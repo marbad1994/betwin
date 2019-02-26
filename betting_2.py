@@ -11,7 +11,7 @@ def main(e_odds,x_odds, t_odds, x_bet):
             t_to = 1500
         if bonus == 1000:
             e_from = 2000
-            e_to = 7000
+            e_to = 10000
             t_from = 500
             t_to = 3000
         if bonus == 2000:
@@ -25,6 +25,10 @@ def main(e_odds,x_odds, t_odds, x_bet):
             t_from = 1000
             t_to = 7500
     
+        e_from = 1000
+        e_to = 25000
+        t_from = 200
+        t_to = 10000
         for i in range(e_from,e_to):#[::5]:    
             for n in range(t_from,t_to):#[::5]:
                 t_total = n
@@ -50,27 +54,30 @@ def main(e_odds,x_odds, t_odds, x_bet):
         #e_odds = 6.45 
         #x_odds = 4.2
         #t_odds = 1.63
-        if bonus == 500:
-            t_from = 1000
-            t_to = 4000
-            e_from = 200
-            e_to = 1500
-        if bonus == 1000:
-            t_from = 2000
-            t_to = 7000
-            e_from = 500
-            e_to = 3000
-        if bonus == 2000:
-            t_from = 3000
-            t_to = 20000
-            e_from = 700
-            e_to = 6500
-        if bonus == 2500:
-            t_from = 6000
-            t_to = 25000
-            e_from = 1000
-            e_to = 7500
-    
+        #if bonus == 500:
+       #     t_from = 1000
+       #     t_to = 4000
+       #     e_from = 200
+       #     e_to = 1500
+       # if bonus == 1000:
+       #     t_from = 2000
+       #     t_to = 10000
+       #     e_from = 500
+       #     e_to = 3000
+       # if bonus == 2000:
+       #     t_from = 3000
+       #     t_to = 20000
+       #     e_from = 700
+       #     e_to = 6500
+       # if bonus == 2500:
+       #     t_from = 6000
+       #     t_to = 25000
+       #     e_from = 1000
+       #     e_to = 7500
+        t_from = 1000
+        t_to = 25000
+        e_from = 200
+        e_to = 10000
         for i in range(t_from,t_to):#[::5]:    
             for n in range(e_from,e_to):#[::5]:
                 e_total = n
