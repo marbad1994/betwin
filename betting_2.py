@@ -25,8 +25,8 @@ def main(e_odds,x_odds, t_odds, x_bet):
             t_from = 1000
             t_to = 7500
     
-        for i in range(e_from,e_to):#[::5]:    
-            for n in range(t_from,t_to):#[::5]:
+        for i in range(e_from,e_to)[::2]:    
+            for n in range(t_from,t_to)[::2]:
                 t_total = n
                 e_total = i
 
@@ -70,8 +70,8 @@ def main(e_odds,x_odds, t_odds, x_bet):
             t_to = 25000
             e_from = 1000
             e_to = 7500
-        for i in range(t_from,t_to):#[::5]:    
-            for n in range(e_from,e_to):#[::5]:
+        for i in range(t_from,t_to)[::2]:    
+            for n in range(e_from,e_to)[::2]:
                 e_total = n
                 t_total = i
 
