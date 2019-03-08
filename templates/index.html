@@ -15,7 +15,18 @@
 </nav>
 <body style="min-height: 1080px; background-color: #677259">
 <br>
-<div style="background-color: #ffffff; margin-left: 25%; margin-right: 25%">
+<div>
+<nav>
+	<div class="nav nav-tabs" id="nav-tab" role="tablist">
+		<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home"role="tab" aria-controls="nav-home" aria-selected="true">Bonus Betting</a>
+		<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"role="tab" aria-controls="nav-profile" aria-selected="false">Safe Betting</a>
+	</div>
+</nav>
+	<div class="row">
+		<div class="col" style="width='';">
+<div style="background-color: #ffffff; margin-left: ; margin-right: ; height=700px">
+<div class="tab-content" id="nav-tabContent">
+	<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 	<br><br>
 <div class="container">
 <form action="{{ url_for('index') }}" method="POST">
@@ -69,6 +80,74 @@
 <br>
 <br>
 </div>
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+
+	<br><br>
+<div class="container">
+<form action="{{ url_for('index') }}" method="POST">
+<div class="row">
+	<div class="col">
+		<h3>1</h3>
+		<input type="text" name="one_bet" {% if request.form.get('one_bet') %} value="{{request.form.get('one_bet')}}" {% endif%}><br>
+	</div>
+	<div class="col">
+		<h3>X</h3>
+		<input type="text" name="cross_bet"{% if request.form.get('cross_bet') %} value="{{request.form.get('cross_bet')}}"{% endif %}><br>
+	</div>
+	<div class="col">
+		<h3>2</h3>
+		<input type="text" name="two_bet" {% if request.form.get('two_bet') %} value="{{request.form.get('two_bet')}}" {% endif %}><br>
+	</div>
+</div>
+<br>
+<h3>Bonus</h3> 
+<select name="bonus">
+	<option value="500" {% if request.form.get('bonus') == "500"  %} selected {% endif %}>500</option>
+	<option value="1000" {% if request.form.get('bonus') == "1000" %} selected {% endif %}>1000</option>
+	<option value="2000" {% if request.form.get('bonus') == "2000" %} selected {% endif %} >2000</option>
+	<option value="2500" {% if request.form.get('bonus') == "2500" %} selected {% endif %}>2500</option>
+</select> 
+<br>
+<br>
+	<button class="btn btn-success" type="submit">Submit</button>
+</form>
+<h1>{{bettson[3]}}</h1>
+<div class="row">
+
+	<div class="col">	
+		<h3>{{bettson[0]}}</h3>
+	</div>
+
+	<div class="col">	
+		<h2>{{bettson[1]}}</h2>
+	</div>
+
+	<div class="col">	
+		<h2>{{bettson[2]}}</h2>
+	</div>
+
+</div>
+<a href=""  data-toggle="modal" data-target="#exampleModal2">
+  Hur funkar det?
+</a>
+</div>
+<br>
+<br>
+<br>
+
+
+</div>
+
+
+
+
+</div>
+</div>
+	</div>
+	<div class="col">
+<iframe src="https://www.betbrain.se" height="150%" width="80%"></iframe>
+</div>
 </body>
 
 
@@ -85,6 +164,28 @@
       <div class="modal-body">
         Algoritmen räknar ut vad du ska betta på 1, X och 2 för att gå +- 0 som sämst och vinna pengar på alternativet med lägst odds.
 	Bonusen bestämmer hur mycket det går att vinna, på "X" ska du alltid betta bonusen gånger 2.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Hur funkar det?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Algoritmen räknar ut vad du ska betta på 1, X och 2 för att gå +- 0 som sämst och vinna pengar på alternativet med lägst odds.
+	Bonusen bestämmer hur mycket det går att vinn, på "X" ska du alltid betta bonusen gånger 2.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
